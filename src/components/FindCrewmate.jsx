@@ -1,6 +1,6 @@
 import react, {useState, useEffect} from 'react';
 
-const FindCrewmate = () => {
+const FindCrewmate = ({addOrEdit}) => {
 
     const initialFieldValues = {
         name: '',
@@ -20,8 +20,9 @@ const FindCrewmate = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log('recreation')
-        console.log(fieldValues)
+
+        //add verification
+        addOrEdit(fieldValues)
     }
 
     return (

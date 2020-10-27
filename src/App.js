@@ -1,7 +1,9 @@
-import Crew from './components/crew';
-import FindCrewmate from './components/FindCrewmate';
+import SailingForAdventure from './components/SailingForAdventure'
 
 function App() {
+
+
+
   return (
     <div className="row">
       <div className="col-md-10 offset-md-1 ">
@@ -12,13 +14,7 @@ function App() {
             </div>
 
           <div className="row m-5">
-            <div className="col-md-5 m-2">
-              formulaire
-              <FindCrewmate/>
-            </div>
-            <div className="col-md-5 m-2">
-              <Crew/>
-            </div>
+            <SailingForAdventure/>
           </div>
 
         </div>
