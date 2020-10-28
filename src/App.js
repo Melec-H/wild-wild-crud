@@ -11,6 +11,7 @@ function App() {
         <div className="content">
             <div className="jumbotron">
               <h1 className="display-4 text-center">WILD WILD CRUD</h1>
+              <h3 className="display-5 text-center">Créer l'équipage parfait, et embarquader sur l'argotier</h3>
             </div>
 
           <div className="row">
