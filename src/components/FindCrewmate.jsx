@@ -1,14 +1,29 @@
 import react, {useState, useEffect} from 'react';
+import { propTypes } from 'react-bootstrap/esm/Image';
 
-const FindCrewmate = ({addOrEdit}) => {
+const FindCrewmate = ({addOrEdit, crewmateId, crewmateObjects}) => {
 
     const initialFieldValues = {
-        name: '',
+        
         surname: '',
-        speciality: ''
+        speciality: '',
+        name: '',
     }
 
     const [fieldValues, setFieldValues] = useState(initialFieldValues);
+
+    useEffect(()=>{
+        if(crewmateId==''){
+            setFieldValues({
+                ...initialFieldValues
+            })
+        }
+        else{
+            setFieldValues({
+                ...crewmateObjects[crewmateId]
+            })
+        }
+    }, [crewmateId, crewmateObjects])
 
     const handleInputChange = e => {
         const {name, value} = e.target;
@@ -34,7 +49,7 @@ const FindCrewmate = ({addOrEdit}) => {
                     className="form-control" 
                     placeholder="name" 
                     name="name" 
-                    values={fieldValues.name} 
+                    value={fieldValues.name} 
                     onChange={handleInputChange}></input>
                 </div>
                 <div className="form-group input-group col-md-6">
@@ -50,11 +65,11 @@ const FindCrewmate = ({addOrEdit}) => {
                 <input 
                 className="form-control" 
                 placeholder="speciality" name="speciality" 
-                values={fieldValues.speciality}
+                value={fieldValues.speciality}
                 onChange={handleInputChange}></input>
             </div>
             <div className="form-group">
-                <input type="submit" value="SaveForm" className="btn btn-secondary btn-block"/>
+                <input type="submit" value={crewmateId == '' ? 'Save' : 'Update'} className="btn btn-secondary btn-block"/>
             </div>
         </form> 
     );

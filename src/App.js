@@ -13,7 +13,7 @@ function App() {
               <h1 className="display-4 text-center">WILD WILD CRUD</h1>
             </div>
 
-          <div className="row m-5">
+          <div className="row">
             <SailingForAdventure/>
           </div>
 
