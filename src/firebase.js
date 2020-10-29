@@ -3,7 +3,7 @@ import "firebase/database";
 
 
 var firebaseConfig = {
-  apiKey: "AIzaSyB5qKebz4TgdF7_-g6pw8MwdKHTWmtt3Wc",
+  apiKey: "{//your api key here}",
   authDomain: "wild-wild-crud.firebaseapp.com",
   databaseURL: "https://wild-wild-crud.firebaseio.com",
   projectId: "wild-wild-crud",
